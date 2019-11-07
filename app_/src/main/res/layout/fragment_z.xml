@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.Z_Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_change_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <include layout="@layout/mymotionbar"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+            android:overScrollMode="never"
+            android:id="@+id/nest_croll_view"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:scaleType="fitXY"
+                    android:id="@+id/iv_change_color"
+                    android:background="@color/darkcyan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"/>
+
+            <FrameLayout
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:clipChildren="false"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+            <com.youth.banner.Banner
+                    android:clipChildren="false"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:layout_marginRight="@dimen/dp40"
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp150"
+                    app:image_scale_type="fit_xy"
+                    app:indicator_drawable_selected="@drawable/dot_shape_selected"
+                    app:indicator_drawable_unselected="@drawable/dot_shape_unselected"
+                    app:indicator_height="6dp"
+                    app:indicator_width="6dp" />
+            </FrameLayout>
+            <TextView
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:id="@+id/tv"
+                    android:textSize="40sp"
+                    android:gravity="center"
+                    android:text="
+我走过山的时候山不说话，我路过海的时候海不说话；
+
+我坐着的毛驴一步一步滴滴答答，我带着的倚天喑哑。
+
+大家说我因为爱着杨过大侠，找不到所以在峨嵋安家；
+
+其实我只是喜欢峨嵋的雾，像十六岁那年绽放的烟花。
+
+我路过海的时候海不说话，我走过山的时候也听不到回答；
+
+我骑的毛驴步步滴滴答答，悠悠飘向远处可从不想要回家。
+
+正当喜乐无忧年韶华如花，远游风尘之色却不似十九风华；
+
+愁思袭人无计回避真牵挂，不知天涯何处有那我思念的他。
+
+没半点音讯怎续风陵夜话，见不到大哥哥愿知他如何行侠；"
+                    android:textColor="@color/white"
+                    android:background="@color/slategrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

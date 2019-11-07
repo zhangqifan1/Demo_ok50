@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.as.wanandroid_kotlin.customview.MyMotionBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/dancer_scene"
+        android:id="@+id/motion"
+        android:minHeight="@dimen/dp120"
+        android:fitsSystemWindows="false"
+        app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+
+
+    <com.as.wanandroid_kotlin.customview.ShapeView
+            android:id="@+id/view_light_left"
+            android:background="@color/white"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"/>
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/iv_dancer_left"
+            android:src="@drawable/dancer"
+
+            android:layout_width="@dimen/dp64"
+            android:layout_height="@dimen/dp64"/>
+
+
+    <com.as.wanandroid_kotlin.customview.ShapeView
+            android:id="@+id/view_light_right"
+            android:background="@color/white"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"/>
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/iv_dancer_right"
+            android:src="@drawable/dancer"
+
+            android:layout_width="@dimen/dp64"
+            android:layout_height="@dimen/dp64"/>
+
+
+    <com.as.wanandroid_kotlin.customview.ShapeView
+            android:id="@+id/view_light_center"
+            android:background="@color/white"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"/>
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/iv_dancer_center"
+            android:src="@drawable/dancer"
+
+            android:layout_width="@dimen/dp64"
+            android:layout_height="@dimen/dp64"/>
+
+
+</com.as.wanandroid_kotlin.customview.MyMotionBar>

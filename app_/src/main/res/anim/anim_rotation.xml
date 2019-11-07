@@ -1,0 +1,30 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:ordering="sequentially">
+
+    <!--sequentially 顺序执行    together 同时执行-->
+
+    <!--【1】使用trimPathStart属性，valueFrom:0，valueTo:1-->
+
+    <!--线条从起点缩短到终点，即初始截断部分是0%，从起点开始逐渐扩大到终点，达到100%。-->
+
+    <!--【2】使用trimPathStart属性，valueFrom:1，valueTo:0-->
+
+    <!--线条从终点增长到起点，即初始截断部分是100%，从终点开始逐渐缩小到起点，达到0%。-->
+
+    <!--【3】使用trimPathEnd属性，valueFrom:0，valueTo:1-->
+
+    <!--线条从起点增长到终点，即初始截断部分是100%，从起点开始逐渐缩小到终点，达到0%。-->
+
+    <!--【4】使用trimPathEnd属性，valueFrom:1，valueTo:0-->
+
+    <!--线条从终点缩短到起点，即初始截断部分是0%，从终点开始逐渐扩大到起点，达到100%。-->
+
+
+    <objectAnimator
+            android:duration="1000"
+            android:propertyName="rotation"
+            android:valueFrom="0"
+            android:valueTo="360" />
+
+
+</set>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+            motion:constraintSetEnd="@+id/end"
+            motion:constraintSetStart="@+id/start"
+            motion:duration="4000">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                    android:rotation="360"
+                    motion:motionTarget="@id/user_name"
+                    motion:framePosition="50"/>
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+                android:id="@+id/drawerbg"
+                motion:layout_constraintTop_toTopOf="parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/drawerbg"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp300"
+                />
+
+        <Constraint
+
+                android:scaleX="0"
+                android:scaleY="0"
+
+                android:layout_marginTop="@dimen/dp110"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toLeftOf="@id/user_name"
+
+                motion:layout_constraintTop_toTopOf="parent"
+
+                android:id="@+id/user_icon"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+
+                android:src="@mipmap/ic_launcher"
+
+                motion:civ_border_color="@color/white"
+                motion:civ_border_width="@dimen/dp4"
+                />
+
+
+        <Constraint
+                android:gravity="center"
+                android:id="@+id/user_name"
+
+                android:text="@string/user_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                android:layout_marginTop="@dimen/dp110"
+                motion:layout_constraintTop_toTopOf="parent"
+
+                motion:layout_constraintRight_toRightOf="parent"
+                motion:layout_constraintLeft_toRightOf="@id/user_icon"
+
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+
+                />
+
+        <Constraint
+                android:alpha="0"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintTop_toBottomOf="@id/user_icon"
+                android:text="修改头像"
+                android:id="@+id/change_usericon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:alpha="0"
+                android:layout_marginTop="@dimen/dp20"
+
+                android:layout_marginLeft="@dimen/dp20"
+                motion:layout_constraintTop_toBottomOf="@id/user_icon"
+                motion:layout_constraintLeft_toRightOf="@id/change_usericon"
+                android:text="修改昵称"
+                android:id="@+id/change_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <View
+                android:id="@+id/view_line"
+
+                motion:layout_constraintLeft_toLeftOf="parent"
+                android:background="@color/burlywood"
+                android:layout_marginTop="@dimen/dp300"
+                motion:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"/>
+
+        <Constraint
+                android:rotation="90"
+
+                android:id="@+id/tv1"
+                android:layout_marginTop="@dimen/dp40"
+                motion:layout_constraintTop_toTopOf="@id/view_line"
+
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="窗外雨潺潺"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:rotation="90"
+
+                android:id="@+id/tv2"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv1"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="春意阑珊"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:rotation="90"
+
+                android:id="@+id/tv3"
+                android:layout_marginTop="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv2"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="罗衾不耐五更寒"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:rotation="90"
+
+                android:id="@+id/tv4"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv3"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="梦里不知身是客"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:rotation="90"
+
+                android:id="@+id/tv5"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv4"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="一晌贪欢"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+                android:id="@+id/drawerbg"
+                motion:layout_constraintTop_toTopOf="parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/drawerbg"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp300"
+                />
+
+        <Constraint
+
+                android:layout_marginTop="@dimen/dp110"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toLeftOf="@id/user_name"
+
+                motion:layout_constraintTop_toTopOf="parent"
+
+                android:id="@+id/user_icon"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+
+                android:src="@mipmap/ic_launcher"
+
+                motion:civ_border_color="@color/white"
+                motion:civ_border_width="@dimen/dp4"
+                />
+
+
+        <Constraint
+                android:gravity="center"
+                android:id="@+id/user_name"
+
+                android:text="@string/user_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                android:layout_marginTop="@dimen/dp110"
+                motion:layout_constraintTop_toTopOf="parent"
+
+                motion:layout_constraintRight_toRightOf="parent"
+                motion:layout_constraintLeft_toRightOf="@id/user_icon"
+
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+
+                />
+
+        <Constraint
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintTop_toBottomOf="@id/user_icon"
+                android:text="修改头像"
+                android:id="@+id/change_usericon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        <Constraint
+                android:layout_marginTop="@dimen/dp20"
+
+                android:layout_marginLeft="@dimen/dp20"
+                motion:layout_constraintTop_toBottomOf="@id/user_icon"
+                motion:layout_constraintLeft_toRightOf="@id/change_usericon"
+                android:text="修改昵称"
+                android:id="@+id/change_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <Constraint
+                android:id="@+id/view_line"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                android:background="@color/burlywood"
+                android:layout_marginTop="@dimen/dp300"
+                motion:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"/>
+
+
+        <Constraint
+                android:id="@+id/tv1"
+                android:layout_marginTop="@dimen/dp40"
+                motion:layout_constraintTop_toTopOf="@id/view_line"
+
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="窗外雨潺潺"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:id="@+id/tv2"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv1"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="春意阑珊"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:id="@+id/tv3"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv2"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="罗衾不耐五更寒"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:id="@+id/tv4"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv3"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="梦里不知身是客"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Constraint
+                android:id="@+id/tv5"
+                android:layout_marginTop="@dimen/dp40"
+
+                motion:layout_constraintTop_toTopOf="@id/tv4"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="一晌贪欢"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </ConstraintSet>
+
+</MotionScene>
+
+
+

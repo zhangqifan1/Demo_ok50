@@ -1,0 +1,14 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:drawable="@drawable/vectalign_vector_drawable_end"
+                 tools:ignore="NewApi">
+    <target
+            android:name="v"
+            android:animation="@anim/vectalign_morph_animator_end_to_start"/>
+
+    <!-- 变化的动画 过程 旋转 -->
+    <target
+            android:name="playgroup"
+            android:animation="@anim/anim_rotation_reverse"/>
+
+</animated-vector>

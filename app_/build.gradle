@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.as.wanandroid_kotlin"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi-v7a'
+//            'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //    防止not found .so
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(path: ':baseinkotlin')
+
+    //防止混乱  jar包冲突
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //ConstraintLayout 和 MotionLayout 一个较新的版本
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
+
+    //自带 glide   +  glide的 transform
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    //这个必须加---element== null
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    //加上这个才可以 有 进度
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    //功能性 稳定性 tablayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    // 万能适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+
+    //辅助 Kotlin 的一个官方库
+    implementation "org.jetbrains.anko:anko:0.10.8"
+
+    // 底部导航
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'//最新版本
+
+
+    //带边框的图片框架  性能比较高
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    // Android 取色器
+    implementation 'androidx.palette:palette:1.0.0'
+
+    //banner
+    compile 'com.youth.banner:banner:1.4.10'
+
+
+
+
+}
